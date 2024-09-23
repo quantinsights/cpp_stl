@@ -1,0 +1,10 @@
+^C:\DATA\DEV\REPO\CPP_STL\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Data/dev/repo/cpp_stl -BC:/Data/dev/repo/cpp_stl/build --check-stamp-file C:/Data/dev/repo/cpp_stl/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
